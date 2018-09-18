@@ -1,4 +1,4 @@
-package com.laviola.workout
+package com.laviola.workout.ui.view
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -8,7 +8,11 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.laviola.workout.ui.viewModel.ExercisesListViewModel
+import com.laviola.workout.R
 import com.laviola.workout.data.Status
+import com.laviola.workout.model.Exercise
+import com.laviola.workout.ui.item.ExerciseItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.exercices_list_fragment.*

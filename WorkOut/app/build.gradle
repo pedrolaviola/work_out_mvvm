@@ -6,7 +6,6 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'realm-android'
 
 
 
@@ -27,8 +26,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    realm {
-        kotlinExtensionsEnabled = true
+    androidExtensions {
+        experimental = true
     }
 }
 
@@ -60,6 +59,7 @@ dependencies {
 
     def groupie_version = "2.1.0"
     implementation "com.xwray:groupie:$groupie_version"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$groupie_version"
 
     def lottie_version = "2.6.1"
     implementation "com.airbnb.android:lottie:$lottie_version"
@@ -67,6 +67,14 @@ dependencies {
     // Lifecycle components
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+
+    def room_version = "1.1.1"
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version" // use kapt for Kotlin
+
+    // Test helpers
+    testImplementation "android.arch.persistence.room:testing:$room_version"
 
 
 }

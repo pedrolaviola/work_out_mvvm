@@ -1,4 +1,4 @@
-package com.laviola.workout.ui.view
+package com.laviola.workout
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

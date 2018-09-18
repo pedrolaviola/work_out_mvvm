@@ -6,7 +6,7 @@
     app:startDestination="@id/exercisesListFragment">
     <fragment
         android:id="@+id/exercisesListFragment"
-        android:name="com.laviola.workout.ui.view.ExercisesListFragment"
+        android:name="com.laviola.workout.ExercisesListFragment"
         android:label="exercices_list_fragment"
         tools:layout="@layout/exercices_list_fragment" />
 </navigation>

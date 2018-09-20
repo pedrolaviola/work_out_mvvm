@@ -8,20 +8,11 @@ import com.laviola.workout.model.Exercise
 import com.laviola.workout.storage.ExerciseRepository
 
 class ExercisesListViewModel : ViewModel() {
-    val exercises: MutableLiveData<Response<Array<Exercise>>> = MutableLiveData()
+    val exercises = MutableLiveData<Response<MutableList<Exercise>>>()
     private val repository = ExerciseRepository()
 
     init {
-        addExercise()
-        addExercise()
         val exerciseList = repository.getAllExercises()
         exercises.value = Response(Status.SUCCESS, exerciseList, null)
-    }
-
-    private fun addExercise() {
-        repository.addExercise(arrayOf(Exercise(name = "Nome",
-                repeat = "10",
-                series = "3",
-                machine = "30")))
     }
 }

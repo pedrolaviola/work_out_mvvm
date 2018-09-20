@@ -14,11 +14,11 @@ class ExerciseRepository {
         return MyApplication.instance
     }
 
-    fun getAllExercises(): Array<Exercise> {
+    fun getAllExercises(): MutableList<Exercise> {
         return db.userDao().getAllExercises()
     }
 
-    fun addExercise(array: Array<Exercise>){
+    fun addExercise(array: MutableList<Exercise>){
         db.userDao().addExercises(array)
     }
 }

@@ -10,5 +10,5 @@ open class Exercise(@ColumnInfo(name = "name") var name: String,
                     @ColumnInfo(name = "repeat") var repeat: String,
                     @ColumnInfo(name = "machine") var machine: String) {
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
+    var id: Int? = null
 }

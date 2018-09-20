@@ -6,7 +6,7 @@ import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 import kotlinx.android.synthetic.main.item_exercise.*
 
-class ExerciseItem(private val exercise: Exercise) : Item() {
+class ExerciseItem constructor(private val exercise: Exercise) : Item() {
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.title.text = exercise.name
@@ -16,6 +16,6 @@ class ExerciseItem(private val exercise: Exercise) : Item() {
     }
 
     override fun getLayout(): Int {
-        return R.layout.item_exercise//To change body of created functions use File | Settings | File Templates.
+        return R.layout.item_exercise
     }
 }

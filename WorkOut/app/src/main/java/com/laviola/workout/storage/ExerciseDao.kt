@@ -2,6 +2,7 @@ package com.laviola.workout.storage
 
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
+import android.arch.persistence.room.OnConflictStrategy
 import android.arch.persistence.room.Query
 import com.laviola.workout.model.Exercise
 
@@ -9,8 +10,8 @@ import com.laviola.workout.model.Exercise
 interface ExerciseDao {
 
     @Query("Select * FROM exercise")
-    fun getAllExercises(): Array<Exercise>
+    fun getAllExercises(): MutableList<Exercise>
 
-    @Insert
-    fun addExercises(array: Array<Exercise>)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun addExercises(array: MutableList<Exercise>)
 }

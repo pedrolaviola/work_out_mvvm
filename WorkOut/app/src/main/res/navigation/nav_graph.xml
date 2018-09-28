@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/exercisesListFragment">
+    <fragment
+        android:id="@+id/exercisesListFragment"
+        android:name="com.laviola.workout.ui.view.ExercisesListFragment"
+        android:label="exercices_list_fragment"
+        tools:layout="@layout/exercices_list_fragment" >
+        <action
+            android:id="@+id/action_exercisesListFragment_to_exerciseCreationFragment"
+            app:destination="@id/exerciseCreationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseCreationFragment"
+        android:name="com.laviola.workout.ui.view.ExerciseCreationFragment"
+        android:label="exercise_creation_fragment"
+        tools:layout="@layout/exercise_creation_fragment" />
+</navigation>

@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">WorkOut</string>
-    <string name="exercise_name">Nome do exercício</string>
-    <string name="series">Series</string>
-    <string name="repeats">Repetições</string>
-    <string name="machine">Maquina</string>
-    <string name="btn_text">Adicionar</string>
-    <string name="empty_fields">Preencha todos os campos</string>
-</resources>

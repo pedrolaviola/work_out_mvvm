@@ -1,0 +1,3 @@
+[submodule "EspressoTesting"]
+	path = EspressoTesting
+	url = ../EspressoTesting.git
